@@ -2,3 +2,5 @@ go build -v -o php-fpm_exporter .
 
 Static:
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -v -o php-fpm_exporter .
+
+ldd php-fpm_exporter
