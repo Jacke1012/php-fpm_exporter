@@ -1,0 +1,119 @@
+{
+  "projectName": "php-fpm_exporter",
+  "projectOwner": "hipages",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "estahn",
+      "name": "Enrico Stahn",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/362174?v=4",
+      "profile": "http://enricostahn.com",
+      "contributions": [
+        "question",
+        "code",
+        "doc",
+        "maintenance",
+        "test"
+      ]
+    },
+    {
+      "login": "XooR",
+      "name": "Stanislav Antic",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/120429?v=4",
+      "profile": "https://github.com/XooR",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "herb123456",
+      "name": "herb",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1568165?v=4",
+      "profile": "http://herb123456.blogspot.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Nyoroon",
+      "name": "Smoked Cheese",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/182203?v=4",
+      "profile": "https://github.com/Nyoroon",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "sas1024",
+      "name": "Alexander",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/7388179?v=4",
+      "profile": "https://www.old-games.ru",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "stanxing",
+      "name": "Stan Xing",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/23288646?v=4",
+      "profile": "https://github.com/stanxing",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "itcsoft54",
+      "name": "itcsoft54",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/22459145?v=4",
+      "profile": "https://github.com/itcsoft54",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "adduc",
+      "name": "John S Long",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/44527?v=4",
+      "profile": "http://128.io",
+      "contributions": [
+        "infra"
+      ]
+    },
+    {
+      "login": "danielocallaghan",
+      "name": "Daniel O'Callaghan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62488?v=4",
+      "profile": "https://github.com/danielocallaghan",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "stchr",
+      "name": "Simon Stücher",
+      "avatar_url": "https://avatars.githubusercontent.com/u/166079?v=4",
+      "profile": "https://github.com/stchr",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "andresterba",
+      "name": "André Sterba",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48120735?v=4",
+      "profile": "https://sterba.dev",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true
+}
