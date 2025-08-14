@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+
+  prometheus:
+    image: quay.io/prometheus/prometheus:latest
+    ports:
+      - 9090:9090
+    volumes:
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+
+  phpfpm:
+    image: hipages/php
+    environment:
+      PHP_FPM_PM_STATUS_PATH: "/status"
+
+  exporter:
+    image: hipages/php-fpm_exporter:latest
+    ports:
+      - "9253:9253"
+    environment:
+      PHP_FPM_SCRAPE_URI: "tcp://phpfpm:9000/status"
+      PHP_FPM_LOG_LEVEL: "debug"
