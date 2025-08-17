@@ -1,10 +1,29 @@
+# ---- Builder ----
+FROM golang:1.22-alpine AS build
+RUN apk add --no-cache git ca-certificates && update-ca-certificates
+WORKDIR /src
+
+# Cache deps separately for faster rebuilds
+COPY go.mod go.sum ./
+RUN --mount=type=cache,target=/go/pkg/mod \
+    go mod download
+
+# Build
+COPY . .
+RUN --mount=type=cache,target=/root/.cache/go-build \
+    CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+    go build -ldflags="-s -w" -v -o /out/php-fpm_exporter .
+
+# ---- Final ----
 FROM alpine:latest
 
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 
-COPY php-fpm_exporter /
+#COPY php-fpm_exporter /
+
+COPY --from=build /out/php-fpm_exporter /php-fpm_exporter
 
 EXPOSE     9253
 ENTRYPOINT [ "/php-fpm_exporter", "server" ]
