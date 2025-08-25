@@ -15,7 +15,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
     go build -ldflags="-s -w" -v -o /out/php-fpm_exporter .
 
 # ---- Final ----
-FROM alpine:latest
+FROM alpine:3.22
 
 ARG BUILD_DATE
 ARG VCS_REF
