@@ -1,5 +1,5 @@
 # ---- Builder ----
-FROM golang:1.23-alpine AS build
+FROM golang:1.25-alpine AS build
 RUN apk add --no-cache git ca-certificates && update-ca-certificates
 WORKDIR /src
 
@@ -15,7 +15,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
     go build -ldflags="-s -w" -v -o /out/php-fpm_exporter .
 
 # ---- Final ----
-FROM alpine:3.19.8
+FROM alpine:latest
 
 ARG BUILD_DATE
 ARG VCS_REF
